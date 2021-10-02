@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css2?family=Yomogi&display=swap);
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -10001,4 +10002,14 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+.square-img {
+  height: 240px;
+  width: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.logo {
+  font-family: Yomogi;
 }
