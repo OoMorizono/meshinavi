@@ -1,0 +1,39 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+.square-img{
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+}
+
+.logo{
+    font-family:Yomogi;
+}
+
+
+.square-img-s{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.menu_images{
+    max-width: 600px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0;
+}
+
+.item {
+    display: inline-block;
+    margin: 16px 8px 0px 0px;
+}
