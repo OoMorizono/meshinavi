@@ -8,11 +8,12 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link logo" href="{{ route('restaurants.index') }}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link logo" href="{{ route('restaurants.index') }}">Home <span
+                        class="sr-only">(current)</span></a>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="カテゴリー">
-            <input class="form-control mr-sm-2" type="search" placeholder="お店の名前">
+        <form class="form-inline my-2 my-lg-0" mechod="GET" action="{{ route('restaurants.index') }}">
+            <input class="form-control mr-sm-2" type="search" name="category" placeholder="カテゴリ">
+            <input class="form-control mr-sm-2" type="search" name="name" placeholder="お店の名前">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>

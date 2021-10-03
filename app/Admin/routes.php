@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Route;
+use Encore\Admin\Facades\Admin;
 
 Admin::routes();
 
@@ -13,6 +15,5 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('restaurants', RestaurantController::class);
-
-
+    $router->resource('categories', CategoryController::class);
 });
