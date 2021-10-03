@@ -15,5 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(CategorySeeder::class);
         \App\Models\Restaurant::factory(20)->create();
+        $this->call(MenuSeeder::class);
+
     }
 }

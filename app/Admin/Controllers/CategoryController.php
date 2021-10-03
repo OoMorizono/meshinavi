@@ -57,7 +57,7 @@ class CategoryController extends AdminController
     {
         $form = new Form(new Category());
 
-        $form->text('name', __('Name'));
+        $form->text('name', __('category'));
 
         return $form;
     }
