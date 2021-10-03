@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Restaurant;
-
-
+use Faker\Guesser\Name;
 use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
@@ -25,5 +25,20 @@ class RestaurantController extends Controller
     {
         $zoom = 15;
         return view('restaurants.show', compact('restaurant', 'zoom'));
+    }
+
+    public function create()
+    {
+        $categories = Category::all();
+        return view('restaurants.create', compact('categories'));
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'address' => 'required',
+            'opentime' => 'required',
+        ]);
     }
 }

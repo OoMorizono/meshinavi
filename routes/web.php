@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RestaurantController;
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +13,18 @@ use App\Http\Controllers\RestaurantController;
 |
 */
 
-
 Route::get('/', [RestaurantController::class, 'index'])
     ->name('root');
+
+Route::resource('restaurants', RestaurantController::class)    
+->only(['index']);
+
 Route::resource('restaurants', RestaurantController::class)
-    ->only(['index', 'show']);
+->middleware('auth')
+->only(['show', 'create', 'store']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
